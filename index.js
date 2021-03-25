@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
 const getPhotoByName = require("./script");
 var cors = require("cors");
@@ -12,6 +12,10 @@ app.use((req, res, next) => {
   console.log(`- ${req.method} ${req.path}`);
   /* Termina a operação no middleware e chama o próximo middleware ou rota */
   next();
+});
+
+app.get("/", (req, res) => {
+  res.send("Welcome to image scrapper! Type something after the URL, like /sonic");
 });
 
 app.get("/:termForSearch", async (req, res) => {
