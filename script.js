@@ -1,5 +1,4 @@
 const cheerio = require("cheerio");
-const axios = require("axios");
 
 function getPhotoByName(name) {
   return axios

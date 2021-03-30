@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 async function searchByQuery(movie) {
   return axios
     .get(`http://www.omdbapi.com/?s=${movie}&apikey=${process.env.MOVIE_KEY}`)
